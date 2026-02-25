@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at 20% 0%, #111827 0%, #000000 70%);
+  color: #f9fafb;
+  padding: 40px;
+}
+
+/* ===== Top Bar ===== */
+
+.top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.top-bar h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #f97316; /* ORANGE BRAND */
+}
+
+.wallet-btn {
+  background: #f97316;
+  color: #000;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.wallet-btn:hover {
+  background: #fb923c;
+}
+
+/* ===== Search + Sort ===== */
+
+.search-sort {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.search-sort input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid #1f2937;
+  background: #0f172a;
+  color: white;
+}
+
+.search-sort select {
+  padding: 12px 16px;
+  border-radius: 14px;
+  border: 1px solid #1f2937;
+  background: #0f172a;
+  color: white;
+}
+
+/* ===== Filters ===== */
+
+.filters {
+  margin-bottom: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.filters button {
+  background: #111827;
+  border: 1px solid #1f2937;
+  color: #9ca3af;
+  padding: 8px 16px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-weight: 500;
+}
+
+.filters button:hover {
+  border-color: #f97316;
+  color: white;
+}
+
+.filters .active {
+  background: #f97316;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0 0 15px rgba(249, 115, 22, 0.6);
+}
+
+/* ===== Market Count ===== */
+
+.market-count {
+  margin-bottom: 20px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+/* ===== Grid ===== */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+  gap: 20px;
+}
+
+/* ===== Market Card ===== */
+
+.market-card {
+  background: #0b1220;
+  border: 1px solid #1f2937;
+  padding: 22px;
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+.market-card:hover {
+  border-color: #f97316;
+  box-shadow: 0 0 20px rgba(249, 115, 22, 0.2);
+}
+
+.market-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.category {
+  color: #9ca3af;
+  font-weight: 500;
+}
+
+.timer {
+  color: #ef4444;
+  font-weight: 600;
+}
+
+.market-card h3 {
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+}
+
+/* ===== Percentage Bar ===== */
+
+.percentage-bar {
+  height: 8px;
+  background: #1f2937;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+
+.yes-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #f97316, #fb923c);
+  transition: width 0.4s ease;
+}
+
+/* ===== Buttons ===== */
+
+.odds {
+  display: flex;
+  gap: 10px;
+}
+
+.odds button {
+  flex: 1;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.yes {
+  background: #065f46;
+  color: #ffffff;
+}
+
+.no {
+  background: #7f1d1d;
+  color: #ffffff;
+}
+
+.odds button:hover {
+  transform: scale(1.04);
+}
+
+/* ===== Liquidity ===== */
+
+.liquidity {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #9ca3af;
+}
+
+/* ===== Leaderboard ===== */
+
+.leaderboard {
+  margin-top: 60px;
+  padding: 30px;
+  border-radius: 20px;
+  background: #0b1220;
+  border: 1px solid #1f2937;
+}
+
+.leaderboard h2 {
+  margin-bottom: 15px;
+  color: #f97316;
+  font-weight: 600;
+}
+
+.leaderboard p {
+  margin-bottom: 6px;
+  color: #e5e7eb;
+  font-weight: 500;
+}
+/* ===== Animated Background Glow ===== */
+
+body::before {
+  content: "";
+  position: fixed;
+  top: -200px;
+  left: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(249,115,22,0.15), transparent 60%);
+  filter: blur(120px);
+  animation: moveGlow 18s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  bottom: -200px;
+  right: -200px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(249,115,22,0.08), transparent 60%);
+  filter: blur(150px);
+  animation: moveGlow2 22s ease-in-out infinite alternate;
+  z-index: -1;
+}
+
+@keyframes moveGlow {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(200px, 150px);
+  }
+}
+
+@keyframes moveGlow2 {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  100% {
+    transform: translate(-150px, -120px);
+  }
+}
